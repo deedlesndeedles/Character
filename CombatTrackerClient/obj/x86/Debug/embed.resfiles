@@ -1,0 +1,15 @@
+App.xbf
+Custom Controls\InitiativeButton.xbf
+Custom Controls\InitiativeGrid.xbf
+Custom Controls\NavigationButton.xbf
+Custom Controls\PartyListItem.xbf
+Pages\BasePage.xbf
+Pages\CharacterPage.xbf
+Pages\CombatPage.xbf
+Pages\FeatsPage.xbf
+Pages\InventoryPage.xbf
+Pages\MainPage.xbf
+Pages\SettingsPage.xbf
+Pages\SkillsPage.xbf
+Pages\SpellsPage.xbf
+Themes\Generic.xbf
