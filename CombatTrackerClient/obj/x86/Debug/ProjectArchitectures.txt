@@ -1,1 +1,1 @@
-C:\Users\it\Desktop\CombatTrackerClient\CombatTrackerClient\CombatTrackerClient.csproj;x86
+C:\Users\it\Desktop\Character\CombatTrackerClient\CombatTrackerClient.csproj;x86

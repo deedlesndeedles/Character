@@ -17,7 +17,7 @@
                 <RowDefinition Height="50"/>
                 <RowDefinition Height="1*"/>
             </Grid.RowDefinitions>
-            <Grid x:ConnectionId='4' x:Name="Expand"                              Width="50" Height="50" HorizontalAlignment="Left"                                                                                             >
+            <Grid x:ConnectionId='11' x:Name="Expand"                              Width="50" Height="50" HorizontalAlignment="Left"                                                                                             >
 				<TextBlock Text="&#xE700;" FontFamily="Segoe MDL2 Assets" Foreground="White" FontSize="17.333" HorizontalAlignment="Center" VerticalAlignment="Center"/>
 			</Grid>
             <Grid Grid.Row="1" Grid.Column="0" Background="#FF171717">
@@ -32,18 +32,49 @@
                     <RowDefinition/>
                     <RowDefinition Height="50"/>
                 </Grid.RowDefinitions>
-                <local:NavigationButton x:ConnectionId='5' x:Name="Character" Grid.Row="0"                                                                       />
-                <local:NavigationButton x:ConnectionId='6' x:Name="Base" Grid.Row="1"                                                                       />
-                <local:NavigationButton x:ConnectionId='7' x:Name="Combat" Grid.Row="2"                                                                       />
-                <local:NavigationButton x:ConnectionId='8' x:Name="Skills" Grid.Row="3"                                                                       />
-                <local:NavigationButton x:ConnectionId='9' x:Name="Feats" Grid.Row="4"                                                                       />
-                <local:NavigationButton x:ConnectionId='10' x:Name="Inventory" Grid.Row="5"                                                                       />
-                <local:NavigationButton x:ConnectionId='11' x:Name="Spells" Grid.Row="6"                                                                       />
-                <local:NavigationButton x:ConnectionId='12' x:Name="Settings" Grid.Row="8"                                                                       />
+                <local:NavigationButton x:ConnectionId='12' x:Name="NavCharacter" Grid.Row="0"                                                                       />
+                <local:NavigationButton x:ConnectionId='13' x:Name="NavBase" Grid.Row="1"                                                                       />
+                <local:NavigationButton x:ConnectionId='14' x:Name="NavCombat" Grid.Row="2"                                                                       />
+                <local:NavigationButton x:ConnectionId='15' x:Name="NavSkills" Grid.Row="3"                                                                       />
+                <local:NavigationButton x:ConnectionId='16' x:Name="NavFeats" Grid.Row="4"                                                                       />
+                <local:NavigationButton x:ConnectionId='17' x:Name="NavInventory" Grid.Row="5"                                                                       />
+                <local:NavigationButton x:ConnectionId='18' x:Name="NavSpells" Grid.Row="6"                                                                       />
+                <local:NavigationButton x:ConnectionId='19' x:Name="NavSettings" Grid.Row="8"                                                                       />
             </Grid>
         </Grid>
         <Grid Grid.Row="2" Grid.Column="2" Background="Black">
-            <Frame x:ConnectionId='3' x:Name="Content"/>
+            <Frame x:ConnectionId='10' x:Name="Content"/>
+        </Grid>
+        <GridView x:ConnectionId='3' x:Name="gridView" Grid.ColumnSpan="2">
+            <GridView.Background>
+                <SolidColorBrush Color="Black" Opacity="0.8"/>
+            </GridView.Background>
+        </GridView>
+        <Grid x:ConnectionId='4' x:Name="gridFiles" Grid.Row="0" Background="#FF171717">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="1*"/>
+            </Grid.RowDefinitions>
+            <Grid x:ConnectionId='5' x:Name="Expand1"                              Width="50" Height="50" HorizontalAlignment="Left"                                                                                             >
+                <TextBlock Text="&#xE700;" FontFamily="Segoe MDL2 Assets" Foreground="White" FontSize="17.333" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            </Grid>
+            <Grid Grid.Row="1" Grid.Column="0" Background="#FF171717">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="50"/>
+                    <RowDefinition Height="50"/>
+                    <RowDefinition Height="50"/>
+                    <RowDefinition Height="50"/>
+                    <RowDefinition Height="50"/>
+                    <RowDefinition Height="50"/>
+                    <RowDefinition Height="50"/>
+                    <RowDefinition/>
+                    <RowDefinition Height="50"/>
+                </Grid.RowDefinitions>
+                <local:FilesButton x:ConnectionId='6' x:Name="NewCharacter" Grid.Row="0"                                                                           />
+                <local:FilesButton x:ConnectionId='7' x:Name="LoadCharacter" Grid.Row="1"                                                                           />
+                <local:FilesButton x:ConnectionId='8' x:Name="SortOptions" Grid.Row="2"                                                                           />
+                <local:NavigationButton x:ConnectionId='9' x:Name="NavSettings1" Grid.Row="8"                                                                       />
+            </Grid>
         </Grid>
     </Grid>
 </Page>

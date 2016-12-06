@@ -16,13 +16,14 @@ namespace CombatTrackerClient.Tools
         private static Character lastVisited;
         private static StorageFile file;
         private static string last = "last", filename = "chars.xml", xmltag = "Characters";
+        public static int CURRENTindex = 0;
 
         public static void AddCharacterToSerializationList(Character character)
         {
-            if (characters.ContainsKey(character.name))
-                characters.Remove(character.name);
+            if (characters.Count > 0 && characters.ContainsKey(character.ID))
+                characters.Remove(character.ID);
 
-            characters.Add(character.name, character);
+            characters.Add(character.ID, character);
         }
 
         public static void AddLastCharacterToSerializationList(Character character)
@@ -80,6 +81,8 @@ namespace CombatTrackerClient.Tools
                 System.Diagnostics.Debug.WriteLine(CharacterSerializer.characters.ElementAt(k).Key + " loaded");
             }
 
+            MainPage.CHARACTER = characters.ElementAt(CURRENTindex).Value;
+
             return true;
         }
 
@@ -92,6 +95,14 @@ namespace CombatTrackerClient.Tools
                        };
 
             return data.ElementAt(0).json;
+        }
+
+        public static string GenerateID()
+        {
+            Random r = new Random(), r2 = new Random();
+            //string id = "0" + Math.Round(r.NextDouble() * 10000) + characters.Count + Math.Round(r2.NextDouble() * 100);
+            string id = "0100" + characters.Count;
+            return id;
         }
 
         public struct CharLoadData

@@ -5,7 +5,7 @@
     xmlns:local="using:CombatTrackerClient"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    mc:Ignorable="d">
+    mc:Ignorable="d" Loaded="Page_Loaded">
 
     <Grid x:Name="MainGrid">
         <Grid.RowDefinitions>
@@ -35,8 +35,9 @@
                     <ColumnDefinition Width="1*"/>
                     <ColumnDefinition Width="1*"/>
                 </Grid.ColumnDefinitions>
-                <Button x:Name="charButtonPlayer" Content="&lt; Name &gt;" HorizontalAlignment="Stretch" Margin="0,0,10,0" VerticalAlignment="Stretch" BorderThickness="0" FontSize="24" FontFamily="Arial Narrow" FontWeight="Normal" HorizontalContentAlignment="Left" Width="308">
-                </Button>
+                <TextBox x:Name="textName" Margin="0,0,10,10" TextWrapping="Wrap" Text="" Background="{x:Null}" BorderBrush="{x:Null}" PlaceholderText="Enter name..." FontSize="26.667" LostFocus="textName_LostFocus"/>
+                <TextBox x:Name="textPlayer" Margin="0,0,10,10" TextWrapping="Wrap" Text="" Background="{x:Null}" BorderBrush="{x:Null}" PlaceholderText="Enter player..." FontSize="26.667" LostFocus="textPlayer_LostFocus" Grid.Column="1"/>
+                <TextBox x:Name="textCampaign" Margin="0,0,10,10" TextWrapping="Wrap" Text="" Background="{x:Null}" BorderBrush="{x:Null}" PlaceholderText="Enter campaign..." FontSize="26.667" LostFocus="textCampaign_LostFocus" Grid.Column="2"/>
             </Grid>
         </Grid>
     </Grid>

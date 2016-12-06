@@ -8,6 +8,7 @@
     <RootType FullName="Windows.UI.Xaml.Thickness" />
     <RootType FullName="Windows.UI.Xaml.Media.SolidColorBrush">
       <RootProperty Name="Color" />
+      <RootProperty Name="Opacity" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.UserControl">
       <RootProperty Name="Content" />
@@ -54,37 +55,47 @@
     </RootType>
     <RootType FullName="CombatTrackerClient.InitiativeButton" />
     <RootType FullName="CombatTrackerClient.InitiativeGrid" />
+    <RootType FullName="CombatTrackerClient.FilesButton">
+      <RootEvent Name="PointerReleased" />
+      <RootEvent Name="PointerPressed" />
+    </RootType>
     <RootType FullName="CombatTrackerClient.Custom_Controls.PartyListItem" />
     <RootType FullName="Windows.UI.Xaml.Controls.Page">
       <RootProperty Name="Content" />
-      <RootEvent Name="PointerReleased" />
       <RootEvent Name="Loaded" />
+      <RootEvent Name="PointerReleased" />
     </RootType>
     <RootType FullName="CombatTrackerClient.CombatPage" />
-    <RootType FullName="Windows.UI.Xaml.Controls.Button">
-      <RootProperty Name="Content" />
-      <RootProperty Name="HorizontalAlignment" />
+    <RootType FullName="Windows.UI.Xaml.Controls.TextBox">
       <RootProperty Name="Margin" />
-      <RootProperty Name="VerticalAlignment" />
-      <RootProperty Name="BorderThickness" />
-      <RootProperty Name="FontSize" />
-      <RootProperty Name="FontFamily" />
-      <RootProperty Name="FontWeight" />
-      <RootProperty Name="HorizontalContentAlignment" />
-      <RootProperty Name="Width" />
+      <RootProperty Name="TextWrapping" />
+      <RootProperty Name="Text" />
       <RootProperty Name="Background" />
       <RootProperty Name="BorderBrush" />
-      <RootProperty Name="Foreground" />
+      <RootProperty Name="PlaceholderText" />
+      <RootProperty Name="FontSize" />
+      <RootEvent Name="LostFocus" />
     </RootType>
+    <RootType FullName="Microsoft.Xaml.DirectUI.ProxyTypes.NullExtension" />
     <RootType FullName="CombatTrackerClient.CharacterPage" />
     <RootType FullName="CombatTrackerClient.NavigationButton">
       <RootEvent Name="PointerReleased" />
       <RootEvent Name="PointerPressed" />
     </RootType>
     <RootType FullName="Microsoft.Xaml.DirectUI.ProxyTypes.ThemeResourceExtension" />
+    <RootType FullName="Windows.UI.Xaml.Controls.GridView">
+      <RootProperty Name="Background" />
+    </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.Frame" />
     <RootType FullName="CombatTrackerClient.MainPage" />
-    <RootType FullName="Microsoft.Xaml.DirectUI.ProxyTypes.NullExtension" />
+    <RootType FullName="Windows.UI.Xaml.Controls.Button">
+      <RootProperty Name="Background" />
+      <RootProperty Name="BorderBrush" />
+      <RootProperty Name="Content" />
+      <RootProperty Name="FontFamily" />
+      <RootProperty Name="Foreground" />
+      <RootProperty Name="FontSize" />
+    </RootType>
     <RootType FullName="CombatTrackerClient.BasePage" />
     <RootType FullName="CombatTrackerClient.SettingsPage" />
     <RootType FullName="CombatTrackerClient.FeatsPage" />

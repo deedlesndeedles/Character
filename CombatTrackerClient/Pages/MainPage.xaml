@@ -32,18 +32,49 @@
                     <RowDefinition/>
                     <RowDefinition Height="50"/>
                 </Grid.RowDefinitions>
-                <local:NavigationButton x:Name="Character" Grid.Row="0" PointerReleased="Pointer_Released" PointerPressed="Navigation_Pressed"/>
-                <local:NavigationButton x:Name="Base" Grid.Row="1" PointerReleased="Pointer_Released" PointerPressed="Navigation_Pressed"/>
-                <local:NavigationButton x:Name="Combat" Grid.Row="2" PointerReleased="Pointer_Released" PointerPressed="Navigation_Pressed"/>
-                <local:NavigationButton x:Name="Skills" Grid.Row="3" PointerReleased="Pointer_Released" PointerPressed="Navigation_Pressed"/>
-                <local:NavigationButton x:Name="Feats" Grid.Row="4" PointerReleased="Pointer_Released" PointerPressed="Navigation_Pressed"/>
-                <local:NavigationButton x:Name="Inventory" Grid.Row="5" PointerReleased="Pointer_Released" PointerPressed="Navigation_Pressed"/>
-                <local:NavigationButton x:Name="Spells" Grid.Row="6" PointerReleased="Pointer_Released" PointerPressed="Navigation_Pressed"/>
-                <local:NavigationButton x:Name="Settings" Grid.Row="8" PointerReleased="Pointer_Released" PointerPressed="Navigation_Pressed"/>
+                <local:NavigationButton x:Name="NavCharacter" Grid.Row="0" PointerReleased="Pointer_Released" PointerPressed="Navigation_Pressed"/>
+                <local:NavigationButton x:Name="NavBase" Grid.Row="1" PointerReleased="Pointer_Released" PointerPressed="Navigation_Pressed"/>
+                <local:NavigationButton x:Name="NavCombat" Grid.Row="2" PointerReleased="Pointer_Released" PointerPressed="Navigation_Pressed"/>
+                <local:NavigationButton x:Name="NavSkills" Grid.Row="3" PointerReleased="Pointer_Released" PointerPressed="Navigation_Pressed"/>
+                <local:NavigationButton x:Name="NavFeats" Grid.Row="4" PointerReleased="Pointer_Released" PointerPressed="Navigation_Pressed"/>
+                <local:NavigationButton x:Name="NavInventory" Grid.Row="5" PointerReleased="Pointer_Released" PointerPressed="Navigation_Pressed"/>
+                <local:NavigationButton x:Name="NavSpells" Grid.Row="6" PointerReleased="Pointer_Released" PointerPressed="Navigation_Pressed"/>
+                <local:NavigationButton x:Name="NavSettings" Grid.Row="8" PointerReleased="Pointer_Released" PointerPressed="Navigation_Pressed"/>
             </Grid>
         </Grid>
         <Grid Grid.Row="2" Grid.Column="2" Background="Black">
             <Frame x:Name="Content"/>
+        </Grid>
+        <GridView x:Name="gridView" Grid.ColumnSpan="2">
+            <GridView.Background>
+                <SolidColorBrush Color="Black" Opacity="0.8"/>
+            </GridView.Background>
+        </GridView>
+        <Grid x:Name="gridFiles" Grid.Row="0" Background="#FF171717">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="1*"/>
+            </Grid.RowDefinitions>
+            <Grid x:Name="Expand1" PointerEntered="Hover_Enter" Width="50" Height="50" HorizontalAlignment="Left" PointerReleased="Expand_Released" PointerExited="Hover_Exit" PointerPressed="Expand_Pressed">
+                <TextBlock Text="&#xE700;" FontFamily="Segoe MDL2 Assets" Foreground="White" FontSize="17.333" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            </Grid>
+            <Grid Grid.Row="1" Grid.Column="0" Background="#FF171717">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="50"/>
+                    <RowDefinition Height="50"/>
+                    <RowDefinition Height="50"/>
+                    <RowDefinition Height="50"/>
+                    <RowDefinition Height="50"/>
+                    <RowDefinition Height="50"/>
+                    <RowDefinition Height="50"/>
+                    <RowDefinition/>
+                    <RowDefinition Height="50"/>
+                </Grid.RowDefinitions>
+                <local:FilesButton x:Name="NewCharacter" Grid.Row="0" PointerReleased="LoadPointer_Released" PointerPressed="LoadButton_Pressed"/>
+                <local:FilesButton x:Name="LoadCharacter" Grid.Row="1" PointerReleased="LoadPointer_Released" PointerPressed="LoadButton_Pressed"/>
+                <local:FilesButton x:Name="SortOptions" Grid.Row="2" PointerReleased="LoadPointer_Released" PointerPressed="LoadButton_Pressed"/>
+                <local:NavigationButton x:Name="NavSettings1" Grid.Row="8" PointerReleased="Pointer_Released" PointerPressed="Navigation_Pressed"/>
+            </Grid>
         </Grid>
     </Grid>
 </Page>

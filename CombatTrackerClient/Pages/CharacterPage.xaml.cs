@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CombatTrackerClient.Tools;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -21,5 +22,29 @@ namespace CombatTrackerClient
 		{
 			this.InitializeComponent();
 		}
-	}
+
+        private void Page_Loaded(object sender, RoutedEventArgs e)
+        {
+            CharacterSerializer.Deserialize();
+
+            textName.Text = MainPage.CHARACTER.Name;
+            textPlayer.Text = MainPage.CHARACTER.Player;
+            textCampaign.Text = MainPage.CHARACTER.Campaign;
+        }
+
+        private void textName_LostFocus(object sender, RoutedEventArgs e)
+        {
+            MainPage.CHARACTER.Name = textName.Text;
+        }
+
+        private void textPlayer_LostFocus(object sender, RoutedEventArgs e)
+        {
+            MainPage.CHARACTER.Player = textPlayer.Text;
+        }
+
+        private void textCampaign_LostFocus(object sender, RoutedEventArgs e)
+        {
+            MainPage.CHARACTER.Campaign = textCampaign.Text;
+        }
+    }
 }

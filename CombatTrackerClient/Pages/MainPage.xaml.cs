@@ -1,10 +1,23 @@
 ﻿//http://timokorinth.de/creating-circular-progress-bar-wpf-silverlight/
+using CombatTrackerClient.Tools;
 using System.Linq;
 using Windows.UI;
 using Windows.UI.ViewManagement;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Input;
+using System;
+using System.Collections.Generic;
+using System.IO;
+using System.Runtime.InteropServices.WindowsRuntime;
+using Windows.Foundation;
+using Windows.Foundation.Collections;
+using Windows.UI.Xaml.Controls.Primitives;
+using Windows.UI.Xaml.Data;
+using Windows.UI.Xaml.Media;
+using Windows.UI.Xaml.Navigation;
+using System.Diagnostics;
+using Windows.UI.Xaml.Shapes;
 
 namespace CombatTrackerClient
 {
@@ -18,8 +31,12 @@ namespace CombatTrackerClient
 
 		NavigationButton _currentlySelected;
 
+        public static Character CHARACTER;
+
 		public MainPage()
 		{
+            LoadCharacters();
+
 			ApplicationViewTitleBar titleBar = ApplicationView.GetForCurrentView().TitleBar;
 			titleBar.BackgroundColor = Colors.Black;
 			titleBar.ForegroundColor = Colors.White;
@@ -32,17 +49,33 @@ namespace CombatTrackerClient
 			titleBar.ButtonHoverForegroundColor = Colors.White;
 
 			InitializeComponent();
-			Character.SetPageType(PageType.CHARACTER);
-			Base.SetPageType(PageType.BASE);
-			Combat.SetPageType(PageType.COMBAT);
-			Skills.SetPageType(PageType.SKILLS);
-            Feats.SetPageType(PageType.FEATS);
-            Inventory.SetPageType(PageType.INVENTORY);
-            Spells.SetPageType(PageType.SPELLS);
-			Settings.SetPageType(PageType.SETTINGS);
+			NavCharacter.SetPageType(PageType.CHARACTER);
+			NavBase.SetPageType(PageType.BASE);
+			NavCombat.SetPageType(PageType.COMBAT);
+			NavSkills.SetPageType(PageType.SKILLS);
+            NavFeats.SetPageType(PageType.FEATS);
+            NavInventory.SetPageType(PageType.INVENTORY);
+            NavSpells.SetPageType(PageType.SPELLS);
+			NavSettings.SetPageType(PageType.SETTINGS);
+            NavSettings1.SetPageType(PageType.SETTINGS);
 
-			ChangePage(Character);
+            NewCharacter.SetLoadType(LoadType.NEW);
+            LoadCharacter.SetLoadType(LoadType.LOAD);
+            SortOptions.SetLoadType(LoadType.SORT);
+            
+
+			//ChangePage(NavCharacter);
 		}
+
+        private async void LoadCharacters()
+        {
+            CharacterSerializer.CharFolder = await Windows.Storage.ApplicationData.Current.LocalFolder.CreateFolderAsync("Appstate", Windows.Storage.CreationCollisionOption.OpenIfExists);
+            CharacterSerializer.Deserialize();
+
+            if (CHARACTER == null)
+                CHARACTER = new Character();
+            CharacterSerializer.AddCharacterToSerializationList(CHARACTER);
+        }
 
 		private void ChangePage(NavigationButton navButton)
 		{
@@ -81,7 +114,26 @@ namespace CombatTrackerClient
 			Expand.Background = App.Colors.BUTTON_HOVER;
 		}
 
-		private void Expand_Pressed(object sender, PointerRoutedEventArgs e)
+        private void LoadButton_Pressed(object sender, PointerRoutedEventArgs e)
+        {
+            IsClicking = true;
+            FilesButton button = sender as FilesButton;
+            if (button != null && button != BeingClicked)
+            {
+                BeingClicked = button;
+                button.Clicked(true);
+            }
+        }
+
+        private void LoadPointer_Released(object sender, PointerRoutedEventArgs e)
+        {
+            IsClicking = false;
+            FilesButton button = sender as FilesButton;
+            if (button != null && BeingClicked == button)
+                button.Function();
+        }
+
+        private void Expand_Pressed(object sender, PointerRoutedEventArgs e)
 		{
 			Expand.Background = App.Colors.BUTTON_CLICK;
 		}
@@ -101,4 +153,9 @@ namespace CombatTrackerClient
 	{
 		CHARACTER, BASE, COMBAT, SKILLS, FEATS, INVENTORY, SPELLS, SETTINGS, EXPAND
 	}
+
+    public enum LoadType
+    {
+        NEW, LOAD, SORT
+    }
 }
