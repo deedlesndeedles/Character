@@ -156,7 +156,7 @@ namespace CombatTrackerClient.CombatTrackerClient_XamlTypeInfo
 
         private void InitTypeTables()
         {
-            _typeNameTable = new string[23];
+            _typeNameTable = new string[25];
             _typeNameTable[0] = "CombatTrackerClient.InitiativeButton";
             _typeNameTable[1] = "Windows.UI.Xaml.Controls.UserControl";
             _typeNameTable[2] = "Windows.UI.Xaml.Controls.TextBlock";
@@ -168,20 +168,22 @@ namespace CombatTrackerClient.CombatTrackerClient_XamlTypeInfo
             _typeNameTable[8] = "System.Action";
             _typeNameTable[9] = "System.MulticastDelegate";
             _typeNameTable[10] = "System.Delegate";
-            _typeNameTable[11] = "CombatTrackerClient.Custom_Controls.PartyListItem";
-            _typeNameTable[12] = "CombatTrackerClient.CombatPage";
-            _typeNameTable[13] = "Windows.UI.Xaml.Controls.Page";
-            _typeNameTable[14] = "CombatTrackerClient.CharacterPage";
-            _typeNameTable[15] = "CombatTrackerClient.NavigationButton";
-            _typeNameTable[16] = "CombatTrackerClient.MainPage";
-            _typeNameTable[17] = "CombatTrackerClient.BasePage";
-            _typeNameTable[18] = "CombatTrackerClient.SettingsPage";
-            _typeNameTable[19] = "CombatTrackerClient.FeatsPage";
-            _typeNameTable[20] = "CombatTrackerClient.InventoryPage";
-            _typeNameTable[21] = "CombatTrackerClient.SpellsPage";
-            _typeNameTable[22] = "CombatTrackerClient.SkillsPage";
+            _typeNameTable[11] = "CombatTrackerClient.Custom_Controls.LoadItem";
+            _typeNameTable[12] = "String";
+            _typeNameTable[13] = "CombatTrackerClient.Custom_Controls.PartyListItem";
+            _typeNameTable[14] = "CombatTrackerClient.CombatPage";
+            _typeNameTable[15] = "Windows.UI.Xaml.Controls.Page";
+            _typeNameTable[16] = "CombatTrackerClient.CharacterPage";
+            _typeNameTable[17] = "CombatTrackerClient.NavigationButton";
+            _typeNameTable[18] = "CombatTrackerClient.MainPage";
+            _typeNameTable[19] = "CombatTrackerClient.BasePage";
+            _typeNameTable[20] = "CombatTrackerClient.SettingsPage";
+            _typeNameTable[21] = "CombatTrackerClient.FeatsPage";
+            _typeNameTable[22] = "CombatTrackerClient.InventoryPage";
+            _typeNameTable[23] = "CombatTrackerClient.SpellsPage";
+            _typeNameTable[24] = "CombatTrackerClient.SkillsPage";
 
-            _typeTable = new global::System.Type[23];
+            _typeTable = new global::System.Type[25];
             _typeTable[0] = typeof(global::CombatTrackerClient.InitiativeButton);
             _typeTable[1] = typeof(global::Windows.UI.Xaml.Controls.UserControl);
             _typeTable[2] = typeof(global::Windows.UI.Xaml.Controls.TextBlock);
@@ -193,18 +195,20 @@ namespace CombatTrackerClient.CombatTrackerClient_XamlTypeInfo
             _typeTable[8] = typeof(global::System.Action);
             _typeTable[9] = typeof(global::System.MulticastDelegate);
             _typeTable[10] = typeof(global::System.Delegate);
-            _typeTable[11] = typeof(global::CombatTrackerClient.Custom_Controls.PartyListItem);
-            _typeTable[12] = typeof(global::CombatTrackerClient.CombatPage);
-            _typeTable[13] = typeof(global::Windows.UI.Xaml.Controls.Page);
-            _typeTable[14] = typeof(global::CombatTrackerClient.CharacterPage);
-            _typeTable[15] = typeof(global::CombatTrackerClient.NavigationButton);
-            _typeTable[16] = typeof(global::CombatTrackerClient.MainPage);
-            _typeTable[17] = typeof(global::CombatTrackerClient.BasePage);
-            _typeTable[18] = typeof(global::CombatTrackerClient.SettingsPage);
-            _typeTable[19] = typeof(global::CombatTrackerClient.FeatsPage);
-            _typeTable[20] = typeof(global::CombatTrackerClient.InventoryPage);
-            _typeTable[21] = typeof(global::CombatTrackerClient.SpellsPage);
-            _typeTable[22] = typeof(global::CombatTrackerClient.SkillsPage);
+            _typeTable[11] = typeof(global::CombatTrackerClient.Custom_Controls.LoadItem);
+            _typeTable[12] = typeof(global::System.String);
+            _typeTable[13] = typeof(global::CombatTrackerClient.Custom_Controls.PartyListItem);
+            _typeTable[14] = typeof(global::CombatTrackerClient.CombatPage);
+            _typeTable[15] = typeof(global::Windows.UI.Xaml.Controls.Page);
+            _typeTable[16] = typeof(global::CombatTrackerClient.CharacterPage);
+            _typeTable[17] = typeof(global::CombatTrackerClient.NavigationButton);
+            _typeTable[18] = typeof(global::CombatTrackerClient.MainPage);
+            _typeTable[19] = typeof(global::CombatTrackerClient.BasePage);
+            _typeTable[20] = typeof(global::CombatTrackerClient.SettingsPage);
+            _typeTable[21] = typeof(global::CombatTrackerClient.FeatsPage);
+            _typeTable[22] = typeof(global::CombatTrackerClient.InventoryPage);
+            _typeTable[23] = typeof(global::CombatTrackerClient.SpellsPage);
+            _typeTable[24] = typeof(global::CombatTrackerClient.SkillsPage);
         }
 
         private int LookupTypeIndexByName(string typeName)
@@ -241,16 +245,16 @@ namespace CombatTrackerClient.CombatTrackerClient_XamlTypeInfo
 
         private object Activate_3_InitiativeGrid() { return new global::CombatTrackerClient.InitiativeGrid(); }
         private object Activate_4_FilesButton() { return new global::CombatTrackerClient.FilesButton(); }
-        private object Activate_12_CombatPage() { return new global::CombatTrackerClient.CombatPage(); }
-        private object Activate_14_CharacterPage() { return new global::CombatTrackerClient.CharacterPage(); }
-        private object Activate_15_NavigationButton() { return new global::CombatTrackerClient.NavigationButton(); }
-        private object Activate_16_MainPage() { return new global::CombatTrackerClient.MainPage(); }
-        private object Activate_17_BasePage() { return new global::CombatTrackerClient.BasePage(); }
-        private object Activate_18_SettingsPage() { return new global::CombatTrackerClient.SettingsPage(); }
-        private object Activate_19_FeatsPage() { return new global::CombatTrackerClient.FeatsPage(); }
-        private object Activate_20_InventoryPage() { return new global::CombatTrackerClient.InventoryPage(); }
-        private object Activate_21_SpellsPage() { return new global::CombatTrackerClient.SpellsPage(); }
-        private object Activate_22_SkillsPage() { return new global::CombatTrackerClient.SkillsPage(); }
+        private object Activate_14_CombatPage() { return new global::CombatTrackerClient.CombatPage(); }
+        private object Activate_16_CharacterPage() { return new global::CombatTrackerClient.CharacterPage(); }
+        private object Activate_17_NavigationButton() { return new global::CombatTrackerClient.NavigationButton(); }
+        private object Activate_18_MainPage() { return new global::CombatTrackerClient.MainPage(); }
+        private object Activate_19_BasePage() { return new global::CombatTrackerClient.BasePage(); }
+        private object Activate_20_SettingsPage() { return new global::CombatTrackerClient.SettingsPage(); }
+        private object Activate_21_FeatsPage() { return new global::CombatTrackerClient.FeatsPage(); }
+        private object Activate_22_InventoryPage() { return new global::CombatTrackerClient.InventoryPage(); }
+        private object Activate_23_SpellsPage() { return new global::CombatTrackerClient.SpellsPage(); }
+        private object Activate_24_SkillsPage() { return new global::CombatTrackerClient.SkillsPage(); }
 
         private global::Windows.UI.Xaml.Markup.IXamlType CreateXamlType(int typeIndex)
         {
@@ -324,84 +328,95 @@ namespace CombatTrackerClient.CombatTrackerClient_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 11:   //  CombatTrackerClient.Custom_Controls.PartyListItem
+            case 11:   //  CombatTrackerClient.Custom_Controls.LoadItem
                 userType = new global::CombatTrackerClient.CombatTrackerClient_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.UserControl"));
+                userType.AddMemberName("ID");
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 12:   //  CombatTrackerClient.CombatPage
-                userType = new global::CombatTrackerClient.CombatTrackerClient_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_12_CombatPage;
-                userType.SetIsLocalType();
-                xamlType = userType;
-                break;
-
-            case 13:   //  Windows.UI.Xaml.Controls.Page
+            case 12:   //  String
                 xamlType = new global::CombatTrackerClient.CombatTrackerClient_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 14:   //  CombatTrackerClient.CharacterPage
-                userType = new global::CombatTrackerClient.CombatTrackerClient_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_14_CharacterPage;
+            case 13:   //  CombatTrackerClient.Custom_Controls.PartyListItem
+                userType = new global::CombatTrackerClient.CombatTrackerClient_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.UserControl"));
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 15:   //  CombatTrackerClient.NavigationButton
+            case 14:   //  CombatTrackerClient.CombatPage
+                userType = new global::CombatTrackerClient.CombatTrackerClient_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
+                userType.Activator = Activate_14_CombatPage;
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 15:   //  Windows.UI.Xaml.Controls.Page
+                xamlType = new global::CombatTrackerClient.CombatTrackerClient_XamlTypeInfo.XamlSystemBaseType(typeName, type);
+                break;
+
+            case 16:   //  CombatTrackerClient.CharacterPage
+                userType = new global::CombatTrackerClient.CombatTrackerClient_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
+                userType.Activator = Activate_16_CharacterPage;
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 17:   //  CombatTrackerClient.NavigationButton
                 userType = new global::CombatTrackerClient.CombatTrackerClient_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.UserControl"));
-                userType.Activator = Activate_15_NavigationButton;
+                userType.Activator = Activate_17_NavigationButton;
                 userType.AddMemberName("Type");
                 userType.AddMemberName("IsActive");
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 16:   //  CombatTrackerClient.MainPage
+            case 18:   //  CombatTrackerClient.MainPage
                 userType = new global::CombatTrackerClient.CombatTrackerClient_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_16_MainPage;
+                userType.Activator = Activate_18_MainPage;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 17:   //  CombatTrackerClient.BasePage
+            case 19:   //  CombatTrackerClient.BasePage
                 userType = new global::CombatTrackerClient.CombatTrackerClient_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_17_BasePage;
+                userType.Activator = Activate_19_BasePage;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 18:   //  CombatTrackerClient.SettingsPage
+            case 20:   //  CombatTrackerClient.SettingsPage
                 userType = new global::CombatTrackerClient.CombatTrackerClient_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_18_SettingsPage;
+                userType.Activator = Activate_20_SettingsPage;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 19:   //  CombatTrackerClient.FeatsPage
+            case 21:   //  CombatTrackerClient.FeatsPage
                 userType = new global::CombatTrackerClient.CombatTrackerClient_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_19_FeatsPage;
+                userType.Activator = Activate_21_FeatsPage;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 20:   //  CombatTrackerClient.InventoryPage
+            case 22:   //  CombatTrackerClient.InventoryPage
                 userType = new global::CombatTrackerClient.CombatTrackerClient_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_20_InventoryPage;
+                userType.Activator = Activate_22_InventoryPage;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 21:   //  CombatTrackerClient.SpellsPage
+            case 23:   //  CombatTrackerClient.SpellsPage
                 userType = new global::CombatTrackerClient.CombatTrackerClient_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_21_SpellsPage;
+                userType.Activator = Activate_23_SpellsPage;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 22:   //  CombatTrackerClient.SkillsPage
+            case 24:   //  CombatTrackerClient.SkillsPage
                 userType = new global::CombatTrackerClient.CombatTrackerClient_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_22_SkillsPage;
+                userType.Activator = Activate_24_SkillsPage;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
@@ -484,12 +499,22 @@ namespace CombatTrackerClient.CombatTrackerClient_XamlTypeInfo
             var that = (global::CombatTrackerClient.FilesButton)instance;
             return that.Function;
         }
-        private object get_4_NavigationButton_Type(object instance)
+        private object get_4_LoadItem_ID(object instance)
+        {
+            var that = (global::CombatTrackerClient.Custom_Controls.LoadItem)instance;
+            return that.ID;
+        }
+        private void set_4_LoadItem_ID(object instance, object Value)
+        {
+            var that = (global::CombatTrackerClient.Custom_Controls.LoadItem)instance;
+            that.ID = (global::System.String)Value;
+        }
+        private object get_5_NavigationButton_Type(object instance)
         {
             var that = (global::CombatTrackerClient.NavigationButton)instance;
             return that.Type;
         }
-        private object get_5_NavigationButton_IsActive(object instance)
+        private object get_6_NavigationButton_IsActive(object instance)
         {
             var that = (global::CombatTrackerClient.NavigationButton)instance;
             return that.IsActive;
@@ -526,16 +551,22 @@ namespace CombatTrackerClient.CombatTrackerClient_XamlTypeInfo
                 xamlMember.Getter = get_3_FilesButton_Function;
                 xamlMember.SetIsReadOnly();
                 break;
+            case "CombatTrackerClient.Custom_Controls.LoadItem.ID":
+                userType = (global::CombatTrackerClient.CombatTrackerClient_XamlTypeInfo.XamlUserType)GetXamlTypeByName("CombatTrackerClient.Custom_Controls.LoadItem");
+                xamlMember = new global::CombatTrackerClient.CombatTrackerClient_XamlTypeInfo.XamlMember(this, "ID", "String");
+                xamlMember.Getter = get_4_LoadItem_ID;
+                xamlMember.Setter = set_4_LoadItem_ID;
+                break;
             case "CombatTrackerClient.NavigationButton.Type":
                 userType = (global::CombatTrackerClient.CombatTrackerClient_XamlTypeInfo.XamlUserType)GetXamlTypeByName("CombatTrackerClient.NavigationButton");
                 xamlMember = new global::CombatTrackerClient.CombatTrackerClient_XamlTypeInfo.XamlMember(this, "Type", "System.Type");
-                xamlMember.Getter = get_4_NavigationButton_Type;
+                xamlMember.Getter = get_5_NavigationButton_Type;
                 xamlMember.SetIsReadOnly();
                 break;
             case "CombatTrackerClient.NavigationButton.IsActive":
                 userType = (global::CombatTrackerClient.CombatTrackerClient_XamlTypeInfo.XamlUserType)GetXamlTypeByName("CombatTrackerClient.NavigationButton");
                 xamlMember = new global::CombatTrackerClient.CombatTrackerClient_XamlTypeInfo.XamlMember(this, "IsActive", "Boolean");
-                xamlMember.Getter = get_5_NavigationButton_IsActive;
+                xamlMember.Getter = get_6_NavigationButton_IsActive;
                 xamlMember.SetIsReadOnly();
                 break;
             }

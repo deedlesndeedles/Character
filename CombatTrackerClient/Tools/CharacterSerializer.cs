@@ -97,6 +97,22 @@ namespace CombatTrackerClient.Tools
             return data.ElementAt(0).json;
         }
 
+        public static Character FindCharacterByID(string ID)
+        {
+            return characters[ID];
+        }
+
+        public static int FindCharacterIndex(Character character)
+        {
+            for (int i = 0; i<characters.Count; i++)
+            {
+                if (character == characters.Values.ElementAt(i))
+                    return i;
+            }
+
+            return -1;
+        }
+
         public static string GenerateID()
         {
             Random r = new Random(), r2 = new Random();

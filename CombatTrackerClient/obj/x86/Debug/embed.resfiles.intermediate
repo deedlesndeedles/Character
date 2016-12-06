@@ -2,6 +2,7 @@ App.xbf
 Custom Controls\FilesButton.xbf
 Custom Controls\InitiativeButton.xbf
 Custom Controls\InitiativeGrid.xbf
+Custom Controls\LoadItem.xbf
 Custom Controls\NavigationButton.xbf
 Custom Controls\PartyListItem.xbf
 Pages\BasePage.xbf

@@ -8,6 +8,7 @@ namespace CombatTrackerClient.Tools
 {
     public class Character
     {
+        #region CharacterPage Values
         private static string DEFAULT_NAME = "Unnamed Character";
 
         string id;
@@ -17,7 +18,7 @@ namespace CombatTrackerClient.Tools
             {
                 return id;
             }
-            private set
+            set
             {
                 id = value;
             }
@@ -65,16 +66,48 @@ namespace CombatTrackerClient.Tools
             }
         }
 
+        string portraitPath;
+        public string Portraitpath
+        {
+            get
+            {
+                return portraitPath;
+            }
+            set
+            {
+                portraitPath = value;
+                Save();
+            }
+        }
+        #endregion
+
+        #region BasePage Values
+        int level = 1;
+        public int Level
+        {
+            get
+            {
+                return level;
+            }
+            set
+            {
+                level = value;
+                Save();
+            }
+        }
+        #endregion
+
         public Character()
         {
-            if (ID == null)
-                ID = CharacterSerializer.GenerateID();
+            
         }
 
-        private void Save()
+        private async Task<bool> Save()
         {
-            CharacterSerializer.AddCharacterToSerializationList(this);
-            CharacterSerializer.Serialize();
+            //CharacterSerializer.AddCharacterToSerializationList(this);
+            await CharacterSerializer.Serialize();
+
+            return true;
         }
     }
 }

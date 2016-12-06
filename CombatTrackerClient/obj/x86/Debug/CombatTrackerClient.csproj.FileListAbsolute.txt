@@ -1107,3 +1107,8 @@ C:\Users\it\Desktop\Character\CombatTrackerClient\obj\x86\Debug\Custom Controls\
 C:\Users\it\Desktop\Character\CombatTrackerClient\obj\x86\Debug\Custom Controls\FilesButton.g.cs
 C:\Users\it\Desktop\Character\CombatTrackerClient\obj\x86\Debug\Custom Controls\FilesButton.xaml
 C:\Users\it\Desktop\Character\CombatTrackerClient\obj\x86\Debug\Custom Controls\FilesButton.xbf
+C:\Users\it\Desktop\Character\CombatTrackerClient\bin\x86\Debug\Custom Controls\LoadItem.xbf
+C:\Users\it\Desktop\Character\CombatTrackerClient\obj\x86\Debug\Custom Controls\LoadItem.g.i.cs
+C:\Users\it\Desktop\Character\CombatTrackerClient\obj\x86\Debug\Custom Controls\LoadItem.g.cs
+C:\Users\it\Desktop\Character\CombatTrackerClient\obj\x86\Debug\Custom Controls\LoadItem.xaml
+C:\Users\it\Desktop\Character\CombatTrackerClient\obj\x86\Debug\Custom Controls\LoadItem.xbf

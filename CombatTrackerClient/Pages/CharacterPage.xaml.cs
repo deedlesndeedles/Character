@@ -25,7 +25,12 @@ namespace CombatTrackerClient
 
         private void Page_Loaded(object sender, RoutedEventArgs e)
         {
-            CharacterSerializer.Deserialize();
+            LoadPage();
+        }
+
+        private async void LoadPage()
+        {
+            await CharacterSerializer.Deserialize();
 
             textName.Text = MainPage.CHARACTER.Name;
             textPlayer.Text = MainPage.CHARACTER.Player;

@@ -40,6 +40,7 @@ namespace CombatTrackerClient
                 case PageType.FEATS: Symbol.Text = "\xE125"; Text.Text = "Feats"; Type = typeof(FeatsPage); break;
                 case PageType.INVENTORY: Symbol.Text = "\xE125"; Text.Text = "Inventory"; Type = typeof(InventoryPage); break;
                 case PageType.SPELLS: Symbol.Text = "\xE91A"; Text.Text = "Spells"; Type = typeof(SpellsPage); break;
+                case PageType.BLANK: Type = typeof(Page); break;
 			}
 		}
 

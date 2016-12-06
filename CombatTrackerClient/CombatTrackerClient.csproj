@@ -105,6 +105,9 @@
     <Compile Include="Custom Controls\FilesButton.xaml.cs">
       <DependentUpon>FilesButton.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Custom Controls\LoadItem.xaml.cs">
+      <DependentUpon>LoadItem.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Custom Controls\PartyListItem.xaml.cs">
       <DependentUpon>PartyListItem.xaml</DependentUpon>
     </Compile>
@@ -175,6 +178,10 @@
     <Page Include="Custom Controls\FilesButton.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Custom Controls\LoadItem.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Custom Controls\PartyListItem.xaml">
       <SubType>Designer</SubType>

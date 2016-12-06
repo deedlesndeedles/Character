@@ -1,4 +1,4 @@
-﻿<Page x:ConnectionId='1'
+﻿<Page x:ConnectionId='1' x:Name="Page"
     x:Class="CombatTrackerClient.MainPage"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
@@ -18,8 +18,8 @@
                 <RowDefinition Height="1*"/>
             </Grid.RowDefinitions>
             <Grid x:ConnectionId='11' x:Name="Expand"                              Width="50" Height="50" HorizontalAlignment="Left"                                                                                             >
-				<TextBlock Text="&#xE700;" FontFamily="Segoe MDL2 Assets" Foreground="White" FontSize="17.333" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-			</Grid>
+                <TextBlock Text="&#xE700;" FontFamily="Segoe MDL2 Assets" Foreground="White" FontSize="17.333" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            </Grid>
             <Grid Grid.Row="1" Grid.Column="0" Background="#FF171717">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="50"/>
@@ -31,6 +31,7 @@
                     <RowDefinition Height="50"/>
                     <RowDefinition/>
                     <RowDefinition Height="50"/>
+                    <RowDefinition Height="50"/>
                 </Grid.RowDefinitions>
                 <local:NavigationButton x:ConnectionId='12' x:Name="NavCharacter" Grid.Row="0"                                                                       />
                 <local:NavigationButton x:ConnectionId='13' x:Name="NavBase" Grid.Row="1"                                                                       />
@@ -39,13 +40,14 @@
                 <local:NavigationButton x:ConnectionId='16' x:Name="NavFeats" Grid.Row="4"                                                                       />
                 <local:NavigationButton x:ConnectionId='17' x:Name="NavInventory" Grid.Row="5"                                                                       />
                 <local:NavigationButton x:ConnectionId='18' x:Name="NavSpells" Grid.Row="6"                                                                       />
-                <local:NavigationButton x:ConnectionId='19' x:Name="NavSettings" Grid.Row="8"                                                                       />
+                <local:NavigationButton x:ConnectionId='19' x:Name="NavSettings" Grid.Row="9"                                                                       />
+                <local:FilesButton x:ConnectionId='20' x:Name="NavCharactersMenu" Grid.Row="8"                                                                           />
             </Grid>
         </Grid>
         <Grid Grid.Row="2" Grid.Column="2" Background="Black">
             <Frame x:ConnectionId='10' x:Name="Content"/>
         </Grid>
-        <GridView x:ConnectionId='3' x:Name="gridView" Grid.ColumnSpan="2">
+        <GridView x:ConnectionId='3' x:Name="gridView" Grid.Column="1" Padding="10,10,10,0" IsItemClickEnabled="True">
             <GridView.Background>
                 <SolidColorBrush Color="Black" Opacity="0.8"/>
             </GridView.Background>

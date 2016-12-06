@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CombatTrackerClient.Tools;
+using System;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Input;
 
@@ -36,6 +37,7 @@ namespace CombatTrackerClient
                 case LoadType.NEW: Symbol.Text = "\xE302"; Text.Text = "New Character"; Function = new Action(Create); break;
                 case LoadType.LOAD: Symbol.Text = "\xE13D"; Text.Text = "Load Character"; Function = new Action(Load); break;
                 case LoadType.SORT: Symbol.Text = "\xE945"; Text.Text = "Sort Options"; Function = new Action(Sort); break;
+                case LoadType.MENU: Symbol.Text = "\xE945"; Text.Text = "Load Menu"; Function = new Action(Menu); break;
             }
 		}
 
@@ -52,12 +54,28 @@ namespace CombatTrackerClient
 
         private void Create()
         {
+            Character character = new Character();
+
+            character.ID = CharacterSerializer.GenerateID();
+
+            CharacterSerializer.AddCharacterToSerializationList(character);
+            CharacterSerializer.Serialize();
+
+            MainPage.MAINPAGE.SwitchCharacter(character);
+            
             System.Diagnostics.Debug.WriteLine("Created!");
         }
 
         private void Load()
         {
+            MainPage.MAINPAGE.SwitchCharacter();
+
             System.Diagnostics.Debug.WriteLine("Load!");
+        }
+
+        private void Menu()
+        {
+            MainPage.MAINPAGE.LoadMenu();
         }
 
         private void Sort()
