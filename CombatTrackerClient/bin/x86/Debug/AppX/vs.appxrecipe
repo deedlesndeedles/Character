@@ -22,7 +22,7 @@
     <AppXManifest Include="C:\Users\it\Desktop\Character\CombatTrackerClient\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2016-12-06T23:03:57.598</Modified>
+      <Modified>2016-12-06T23:30:20.614</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
@@ -60,7 +60,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\it\Desktop\Character\CombatTrackerClient\bin\x86\Debug\Core\CombatTrackerClient.exe">
       <PackagePath>CombatTrackerClient.exe</PackagePath>
-      <Modified>2016-12-06T23:03:57.596</Modified>
+      <Modified>2016-12-06T23:30:20.608</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\it\Desktop\Character\CombatTrackerClient\bin\x86\Debug\Core\CombatTrackerClient.xr.xml">
       <PackagePath>CombatTrackerClient.xr.xml</PackagePath>
@@ -68,7 +68,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\it\Desktop\Character\CombatTrackerClient\bin\x86\Debug\Core\entrypoint\CombatTrackerClient.exe">
       <PackagePath>entrypoint\CombatTrackerClient.exe</PackagePath>
-      <Modified>2016-12-06T23:03:56.749</Modified>
+      <Modified>2016-12-06T23:30:19.434</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\it\Desktop\Character\CombatTrackerClient\bin\x86\Debug\Core\Microsoft.CSharp.dll">
       <PackagePath>Microsoft.CSharp.dll</PackagePath>
@@ -92,7 +92,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\it\Desktop\Character\CombatTrackerClient\bin\x86\Debug\Core\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2016-12-06T23:03:57.169</Modified>
+      <Modified>2016-12-06T23:30:19.995</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\it\Desktop\Character\CombatTrackerClient\bin\x86\Debug\Core\System.AppContext.dll">
       <PackagePath>System.AppContext.dll</PackagePath>

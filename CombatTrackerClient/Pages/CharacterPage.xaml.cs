@@ -40,16 +40,19 @@ namespace CombatTrackerClient
         private void textName_LostFocus(object sender, RoutedEventArgs e)
         {
             MainPage.CHARACTER.Name = textName.Text;
+            CharacterSerializer.Serialize();
         }
 
         private void textPlayer_LostFocus(object sender, RoutedEventArgs e)
         {
             MainPage.CHARACTER.Player = textPlayer.Text;
+            CharacterSerializer.Serialize();
         }
 
         private void textCampaign_LostFocus(object sender, RoutedEventArgs e)
         {
             MainPage.CHARACTER.Campaign = textCampaign.Text;
+            CharacterSerializer.Serialize();
         }
     }
 }

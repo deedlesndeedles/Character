@@ -79,6 +79,8 @@ namespace CombatTrackerClient
 
             UpdateLoadGrid();
 
+            await CharacterSerializer.Serialize();
+
             return true;
         }
 
@@ -86,7 +88,7 @@ namespace CombatTrackerClient
         {
             gridView.Items.Clear();
 
-            foreach (Character c in CharacterSerializer.characters.Values)
+            foreach (Character c in CharacterSerializer.Characters.Values)
             {
                 gridView.Items.Add(new LoadItem(c.ID, c.Name, c.Campaign, c.Level));
             }
@@ -112,7 +114,7 @@ namespace CombatTrackerClient
             System.Diagnostics.Debug.WriteLine("N CHARACTER " + CHARACTER.Name);
             System.Diagnostics.Debug.WriteLine("N CURRindex " + CharacterSerializer.CURRENTindex);
 
-            System.Diagnostics.Debug.WriteLine("# Characters " + CharacterSerializer.characters.Count);
+            System.Diagnostics.Debug.WriteLine("# Characters " + CharacterSerializer.Characters.Count);
             System.Diagnostics.Debug.WriteLine("# Grid Items " + gridView.Items.Count);
 
             await CharacterSerializer.Serialize();

@@ -34,7 +34,7 @@ namespace CombatTrackerClient.Tools
             set
             {
                 name = value;
-                Save();
+                //Save();
             }
         }
 
@@ -48,7 +48,7 @@ namespace CombatTrackerClient.Tools
             set
             {
                 player = value;
-                Save();
+                //Save();
             }
         }
 
@@ -62,7 +62,7 @@ namespace CombatTrackerClient.Tools
             set
             {
                 campaign = value;
-                Save();
+                //Save();
             }
         }
 
@@ -76,7 +76,7 @@ namespace CombatTrackerClient.Tools
             set
             {
                 portraitPath = value;
-                Save();
+                //Save();
             }
         }
         #endregion
@@ -92,7 +92,7 @@ namespace CombatTrackerClient.Tools
             set
             {
                 level = value;
-                Save();
+                //Save();
             }
         }
         #endregion

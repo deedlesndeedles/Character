@@ -13,6 +13,17 @@ namespace CombatTrackerClient.Tools
     class CharacterSerializer
     {
         public static Dictionary<string, Character> characters = new Dictionary<string, Character>();
+        public static Dictionary<string, Character> Characters
+        {
+            get
+            {
+                return characters;
+            }
+            set
+            {
+                characters = value;
+            }
+        }
         private static Character lastVisited;
         private static StorageFile file;
         private static string last = "last", filename = "chars.xml", xmltag = "Characters";
@@ -20,18 +31,18 @@ namespace CombatTrackerClient.Tools
 
         public static void AddCharacterToSerializationList(Character character)
         {
-            if (characters.Count > 0 && characters.ContainsKey(character.ID))
-                characters.Remove(character.ID);
+            if (Characters.Count > 0 && Characters.ContainsKey(character.ID))
+                Characters.Remove(character.ID);
 
-            characters.Add(character.ID, character);
+            Characters.Add(character.ID, character);
         }
 
         public static void AddLastCharacterToSerializationList(Character character)
         {
-            if (characters.ContainsKey(last))
-                characters.Remove(last);
+            if (Characters.ContainsKey(last))
+                Characters.Remove(last);
 
-            characters.Add(last, character);
+            Characters.Add(last, character);
         }
 
         static StorageFolder charFolder;
@@ -45,10 +56,13 @@ namespace CombatTrackerClient.Tools
 
         public static async Task<bool> Serialize()
         {
-            string serializedString = JsonConvert.SerializeObject(characters);
+            string serializedString = JsonConvert.SerializeObject(Characters);
+
+            if (serializedString.Length < 5)
+                System.Diagnostics.Debug.WriteLine("WARNING!");
             
-            for (int k = 0; k < CharacterSerializer.characters.Count; k++)
-                System.Diagnostics.Debug.WriteLine(CharacterSerializer.characters.ElementAt(k).Key + " saved");
+            for (int k = 0; k < CharacterSerializer.Characters.Count; k++)
+                System.Diagnostics.Debug.WriteLine(CharacterSerializer.Characters.ElementAt(k).Key + " saved");
             
             XmlDocument characterDoc = new XmlDocument();
 
@@ -73,15 +87,15 @@ namespace CombatTrackerClient.Tools
 
             string f = LoadFromXDocument(doc);
 
-            characters = JsonConvert.DeserializeObject<Dictionary<string, Character>>(f);
+            Characters = JsonConvert.DeserializeObject<Dictionary<string, Character>>(f);
 
 
-            for (int k = 0; k < CharacterSerializer.characters.Count; k++)
+            for (int k = 0; k < CharacterSerializer.Characters.Count; k++)
             {
-                System.Diagnostics.Debug.WriteLine(CharacterSerializer.characters.ElementAt(k).Key + " loaded");
+                System.Diagnostics.Debug.WriteLine(CharacterSerializer.Characters.ElementAt(k).Key + " loaded");
             }
 
-            MainPage.CHARACTER = characters.ElementAt(CURRENTindex).Value;
+            MainPage.CHARACTER = Characters.ElementAt(CURRENTindex).Value;
 
             return true;
         }
@@ -99,14 +113,14 @@ namespace CombatTrackerClient.Tools
 
         public static Character FindCharacterByID(string ID)
         {
-            return characters[ID];
+            return Characters[ID];
         }
 
         public static int FindCharacterIndex(Character character)
         {
-            for (int i = 0; i<characters.Count; i++)
+            for (int i = 0; i<Characters.Count; i++)
             {
-                if (character == characters.Values.ElementAt(i))
+                if (character == Characters.Values.ElementAt(i))
                     return i;
             }
 
@@ -117,7 +131,7 @@ namespace CombatTrackerClient.Tools
         {
             Random r = new Random(), r2 = new Random();
             //string id = "0" + Math.Round(r.NextDouble() * 10000) + characters.Count + Math.Round(r2.NextDouble() * 100);
-            string id = "0100" + characters.Count;
+            string id = "0100" + Characters.Count;
             return id;
         }
 
