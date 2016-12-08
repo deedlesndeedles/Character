@@ -1112,3 +1112,8 @@ C:\Users\it\Desktop\Character\CombatTrackerClient\obj\x86\Debug\Custom Controls\
 C:\Users\it\Desktop\Character\CombatTrackerClient\obj\x86\Debug\Custom Controls\LoadItem.g.cs
 C:\Users\it\Desktop\Character\CombatTrackerClient\obj\x86\Debug\Custom Controls\LoadItem.xaml
 C:\Users\it\Desktop\Character\CombatTrackerClient\obj\x86\Debug\Custom Controls\LoadItem.xbf
+C:\Users\it\Desktop\Character\CombatTrackerClient\bin\x86\Debug\Pages\PartyPage.xbf
+C:\Users\it\Desktop\Character\CombatTrackerClient\obj\x86\Debug\Pages\PartyPage.g.i.cs
+C:\Users\it\Desktop\Character\CombatTrackerClient\obj\x86\Debug\Pages\PartyPage.g.cs
+C:\Users\it\Desktop\Character\CombatTrackerClient\obj\x86\Debug\Pages\PartyPage.xaml
+C:\Users\it\Desktop\Character\CombatTrackerClient\obj\x86\Debug\Pages\PartyPage.xbf

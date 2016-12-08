@@ -1,5 +1,4 @@
-﻿using CombatTrackerServer.Models;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -14,26 +13,18 @@ using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 
-namespace CombatTrackerClient.Custom_Controls
-{
-	public sealed partial class PartyListItem : UserControl
-	{
-		public int id;
+// The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=234238
 
-		public PartyListItem(Party p)
+namespace CombatTrackerClient
+{
+	/// <summary>
+	/// An empty page that can be used on its own or navigated to within a Frame.
+	/// </summary>
+	public sealed partial class PartyPage : Page
+	{
+		public PartyPage()
 		{
 			this.InitializeComponent();
-
-			id = p.Id;
-
-			TextID.Text = p.Id.ToString();
-			TextName.Text = p.Name;
-			TextPlayers.Text = p.JoinedPlayers + "/" + p.MaxPlayers;
-
-			if(p.Locked)
-			{
-				Symbol.Visibility = Visibility.Collapsed;
-			}
 		}
 	}
 }

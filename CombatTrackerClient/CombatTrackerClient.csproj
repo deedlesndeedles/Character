@@ -132,6 +132,9 @@
     <Compile Include="Pages\InventoryPage.xaml.cs">
       <DependentUpon>InventoryPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Pages\PartyPage.xaml.cs">
+      <DependentUpon>PartyPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Pages\SpellsPage.xaml.cs">
       <DependentUpon>SpellsPage.xaml</DependentUpon>
     </Compile>
@@ -216,6 +219,10 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Include="Pages\InventoryPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Pages\PartyPage.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>

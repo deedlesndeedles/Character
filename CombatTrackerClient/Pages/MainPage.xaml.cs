@@ -20,6 +20,7 @@ using System.Diagnostics;
 using Windows.UI.Xaml.Shapes;
 using CombatTrackerClient.Custom_Controls;
 using System.Threading.Tasks;
+using Windows.UI.Popups;
 
 namespace CombatTrackerClient
 {
@@ -59,11 +60,13 @@ namespace CombatTrackerClient
             NavFeats.SetPageType(PageType.FEATS);
             NavInventory.SetPageType(PageType.INVENTORY);
             NavSpells.SetPageType(PageType.SPELLS);
+            NavParty.SetPageType(PageType.PARTY);
             NavSettings.SetPageType(PageType.SETTINGS);
             NavSettings1.SetPageType(PageType.SETTINGS);
 
             NewCharacter.SetLoadType(LoadType.NEW);
             LoadCharacter.SetLoadType(LoadType.LOAD);
+            DeleteCharacter.SetLoadType(LoadType.DELETE);
             SortOptions.SetLoadType(LoadType.SORT);
             NavCharactersMenu.SetLoadType(LoadType.MENU);
 
@@ -101,10 +104,7 @@ namespace CombatTrackerClient
 
             System.Diagnostics.Debug.WriteLine("O CHARACTER " + CHARACTER.Name);
             System.Diagnostics.Debug.WriteLine("O CURRindex " + CharacterSerializer.CURRENTindex);
-
-            //CHARACTER = null;
-            //CharacterSerializer.CURRENTindex = -1;
-
+           
             await LoadCharacters();
 
             NavigationButton blank = new NavigationButton();
@@ -150,6 +150,24 @@ namespace CombatTrackerClient
                 CharacterSerializer.CURRENTindex = CharacterSerializer.FindCharacterIndex(CHARACTER);
 
                 ChangePage(NavCharacter);
+            }
+        }
+
+        public void DeleteChar()
+        {
+            if (gridView.SelectedItem != null)
+            {
+                //Select by Character Indicated
+                Character c = CharacterSerializer.FindCharacterByID(((LoadItem)gridView.SelectedItem).ID);
+
+                CharacterSerializer.RemoveCharacterFromSerializationList(c);
+
+                UpdateLoadGrid();
+            }
+            else
+            {
+                MessageDialog dialog = new MessageDialog("Select a character to delete.");
+                dialog.ShowAsync();
             }
         }
 
@@ -228,12 +246,12 @@ namespace CombatTrackerClient
 
 	public enum PageType
 	{
-		CHARACTER, BASE, COMBAT, SKILLS, FEATS, INVENTORY, SPELLS, SETTINGS, EXPAND, BLANK
+		CHARACTER, BASE, COMBAT, SKILLS, FEATS, INVENTORY, SPELLS, PARTY, SETTINGS, EXPAND, BLANK
 	}
 
     public enum LoadType
     {
-        NEW, LOAD, SORT, MENU
+        NEW, LOAD, DELETE, SORT, MENU
     }
     #endregion
 }

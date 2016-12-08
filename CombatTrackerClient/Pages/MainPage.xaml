@@ -29,6 +29,7 @@
                     <RowDefinition Height="50"/>
                     <RowDefinition Height="50"/>
                     <RowDefinition Height="50"/>
+                    <RowDefinition Height="50"/>
                     <RowDefinition/>
                     <RowDefinition Height="50"/>
                     <RowDefinition Height="50"/>
@@ -40,8 +41,9 @@
                 <local:NavigationButton x:Name="NavFeats" Grid.Row="4" PointerReleased="Pointer_Released" PointerPressed="Navigation_Pressed"/>
                 <local:NavigationButton x:Name="NavInventory" Grid.Row="5" PointerReleased="Pointer_Released" PointerPressed="Navigation_Pressed"/>
                 <local:NavigationButton x:Name="NavSpells" Grid.Row="6" PointerReleased="Pointer_Released" PointerPressed="Navigation_Pressed"/>
-                <local:NavigationButton x:Name="NavSettings" Grid.Row="9" PointerReleased="Pointer_Released" PointerPressed="Navigation_Pressed"/>
-                <local:FilesButton x:Name="NavCharactersMenu" Grid.Row="8" PointerReleased="LoadPointer_Released" PointerPressed="LoadButton_Pressed"/>
+                <local:NavigationButton x:Name="NavParty" Grid.Row="7" PointerReleased="Pointer_Released" PointerPressed="Navigation_Pressed"/>
+                <local:NavigationButton x:Name="NavSettings" Grid.Row="10" PointerReleased="Pointer_Released" PointerPressed="Navigation_Pressed"/>
+                <local:FilesButton x:Name="NavCharactersMenu" Grid.Row="9" PointerReleased="LoadPointer_Released" PointerPressed="LoadButton_Pressed"/>
             </Grid>
         </Grid>
         <Grid Grid.Row="2" Grid.Column="2" Background="Black">
@@ -74,7 +76,8 @@
                 </Grid.RowDefinitions>
                 <local:FilesButton x:Name="NewCharacter" Grid.Row="0" PointerReleased="LoadPointer_Released" PointerPressed="LoadButton_Pressed"/>
                 <local:FilesButton x:Name="LoadCharacter" Grid.Row="1" PointerReleased="LoadPointer_Released" PointerPressed="LoadButton_Pressed"/>
-                <local:FilesButton x:Name="SortOptions" Grid.Row="2" PointerReleased="LoadPointer_Released" PointerPressed="LoadButton_Pressed"/>
+                <local:FilesButton x:Name="DeleteCharacter" Grid.Row="2" PointerReleased="LoadPointer_Released" PointerPressed="LoadButton_Pressed"/>
+                <local:FilesButton x:Name="SortOptions" Grid.Row="3" PointerReleased="LoadPointer_Released" PointerPressed="LoadButton_Pressed"/>
                 <local:NavigationButton x:Name="NavSettings1" Grid.Row="8" PointerReleased="Pointer_Released" PointerPressed="Navigation_Pressed"/>
             </Grid>
         </Grid>

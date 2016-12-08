@@ -33,11 +33,12 @@ namespace CombatTrackerClient
 		public void SetLoadType(LoadType type)
 		{
             switch (type)
-            {
-                case LoadType.NEW: Symbol.Text = "\xE302"; Text.Text = "New Character"; Function = new Action(Create); break;
-                case LoadType.LOAD: Symbol.Text = "\xE13D"; Text.Text = "Load Character"; Function = new Action(Load); break;
-                case LoadType.SORT: Symbol.Text = "\xE945"; Text.Text = "Sort Options"; Function = new Action(Sort); break;
-                case LoadType.MENU: Symbol.Text = "\xE945"; Text.Text = "Load Menu"; Function = new Action(Menu); break;
+            {//https://msdn.microsoft.com/en-us/windows/uwp/style/segoe-ui-symbol-font
+                case LoadType.NEW: Symbol.Text = "\xE1E2"; Text.Text = "New"; Function = new Action(Create); break;
+                case LoadType.LOAD: Symbol.Text = "\xE8DA"; Text.Text = "Load"; Function = new Action(Load); break;
+                case LoadType.DELETE: Symbol.Text = "\xE74D"; Text.Text = "Delete"; Function = new Action(Delete); break;
+                case LoadType.SORT: Symbol.Text = "\xE174"; Text.Text = "Sort Options"; Function = new Action(Sort); break;
+                case LoadType.MENU: Symbol.Text = "\xE10F"; Text.Text = "Load Menu"; Function = new Action(Menu); break;
             }
 		}
 
@@ -63,14 +64,19 @@ namespace CombatTrackerClient
 
             MainPage.MAINPAGE.SwitchCharacter(character);
             
-            System.Diagnostics.Debug.WriteLine("Created!");
+            //System.Diagnostics.Debug.WriteLine("Created!");
         }
 
         private void Load()
         {
             MainPage.MAINPAGE.SwitchCharacter();
 
-            System.Diagnostics.Debug.WriteLine("Load!");
+            //System.Diagnostics.Debug.WriteLine("Load!");
+        }
+
+        private void Delete()
+        {
+            MainPage.MAINPAGE.DeleteChar();
         }
 
         private void Menu()

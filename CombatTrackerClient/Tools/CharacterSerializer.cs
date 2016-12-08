@@ -45,6 +45,15 @@ namespace CombatTrackerClient.Tools
             Characters.Add(last, character);
         }
 
+        public static void RemoveCharacterFromSerializationList(Character character)
+        {
+            if (Characters.Count > 0 && Characters.ContainsKey(character.ID))
+            {
+                Characters.Remove(character.ID);
+                Serialize();
+            }
+        }
+
         static StorageFolder charFolder;
         public static StorageFolder CharFolder
         {

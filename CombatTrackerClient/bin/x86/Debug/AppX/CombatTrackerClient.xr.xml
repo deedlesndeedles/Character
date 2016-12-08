@@ -109,6 +109,7 @@
     <RootType FullName="CombatTrackerClient.SettingsPage" />
     <RootType FullName="CombatTrackerClient.FeatsPage" />
     <RootType FullName="CombatTrackerClient.InventoryPage" />
+    <RootType FullName="CombatTrackerClient.PartyPage" />
     <RootType FullName="CombatTrackerClient.SpellsPage" />
     <RootType FullName="CombatTrackerClient.SkillsPage" />
     <RootType FullName="Windows.UI.Xaml.ResourceDictionary" />
