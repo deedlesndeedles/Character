@@ -553,7 +553,6 @@ C:\Users\it\Desktop\CombatTrackerClient\CombatTrackerClient\obj\x86\Debug\Combat
 C:\Users\it\Desktop\Character\CombatTrackerClient\bin\x86\Debug\App.xbf
 C:\Users\it\Desktop\Character\CombatTrackerClient\bin\x86\Debug\Custom Controls\InitiativeButton.xbf
 C:\Users\it\Desktop\Character\CombatTrackerClient\bin\x86\Debug\Custom Controls\InitiativeGrid.xbf
-C:\Users\it\Desktop\Character\CombatTrackerClient\bin\x86\Debug\Custom Controls\PartyListItem.xbf
 C:\Users\it\Desktop\Character\CombatTrackerClient\bin\x86\Debug\Pages\CombatPage.xbf
 C:\Users\it\Desktop\Character\CombatTrackerClient\bin\x86\Debug\Pages\CharacterPage.xbf
 C:\Users\it\Desktop\Character\CombatTrackerClient\bin\x86\Debug\Custom Controls\NavigationButton.xbf
@@ -832,8 +831,6 @@ C:\Users\it\Desktop\Character\CombatTrackerClient\obj\x86\Debug\Custom Controls\
 C:\Users\it\Desktop\Character\CombatTrackerClient\obj\x86\Debug\Custom Controls\InitiativeButton.g.cs
 C:\Users\it\Desktop\Character\CombatTrackerClient\obj\x86\Debug\Custom Controls\InitiativeGrid.g.i.cs
 C:\Users\it\Desktop\Character\CombatTrackerClient\obj\x86\Debug\Custom Controls\InitiativeGrid.g.cs
-C:\Users\it\Desktop\Character\CombatTrackerClient\obj\x86\Debug\Custom Controls\PartyListItem.g.i.cs
-C:\Users\it\Desktop\Character\CombatTrackerClient\obj\x86\Debug\Custom Controls\PartyListItem.g.cs
 C:\Users\it\Desktop\Character\CombatTrackerClient\obj\x86\Debug\Pages\CombatPage.g.i.cs
 C:\Users\it\Desktop\Character\CombatTrackerClient\obj\x86\Debug\Pages\CombatPage.g.cs
 C:\Users\it\Desktop\Character\CombatTrackerClient\obj\x86\Debug\Pages\CharacterPage.g.i.cs
@@ -858,7 +855,6 @@ C:\Users\it\Desktop\Character\CombatTrackerClient\obj\x86\Debug\XamlTypeInfo.g.c
 C:\Users\it\Desktop\Character\CombatTrackerClient\obj\x86\Debug\App.xaml
 C:\Users\it\Desktop\Character\CombatTrackerClient\obj\x86\Debug\Custom Controls\InitiativeButton.xaml
 C:\Users\it\Desktop\Character\CombatTrackerClient\obj\x86\Debug\Custom Controls\InitiativeGrid.xaml
-C:\Users\it\Desktop\Character\CombatTrackerClient\obj\x86\Debug\Custom Controls\PartyListItem.xaml
 C:\Users\it\Desktop\Character\CombatTrackerClient\obj\x86\Debug\Pages\CombatPage.xaml
 C:\Users\it\Desktop\Character\CombatTrackerClient\obj\x86\Debug\Pages\CharacterPage.xaml
 C:\Users\it\Desktop\Character\CombatTrackerClient\obj\x86\Debug\Custom Controls\NavigationButton.xaml
@@ -873,7 +869,6 @@ C:\Users\it\Desktop\Character\CombatTrackerClient\obj\x86\Debug\Themes\Generic.x
 C:\Users\it\Desktop\Character\CombatTrackerClient\obj\x86\Debug\App.xbf
 C:\Users\it\Desktop\Character\CombatTrackerClient\obj\x86\Debug\Custom Controls\InitiativeButton.xbf
 C:\Users\it\Desktop\Character\CombatTrackerClient\obj\x86\Debug\Custom Controls\InitiativeGrid.xbf
-C:\Users\it\Desktop\Character\CombatTrackerClient\obj\x86\Debug\Custom Controls\PartyListItem.xbf
 C:\Users\it\Desktop\Character\CombatTrackerClient\obj\x86\Debug\Pages\CombatPage.xbf
 C:\Users\it\Desktop\Character\CombatTrackerClient\obj\x86\Debug\Pages\CharacterPage.xbf
 C:\Users\it\Desktop\Character\CombatTrackerClient\obj\x86\Debug\Custom Controls\NavigationButton.xbf
@@ -1117,3 +1112,8 @@ C:\Users\it\Desktop\Character\CombatTrackerClient\obj\x86\Debug\Pages\PartyPage.
 C:\Users\it\Desktop\Character\CombatTrackerClient\obj\x86\Debug\Pages\PartyPage.g.cs
 C:\Users\it\Desktop\Character\CombatTrackerClient\obj\x86\Debug\Pages\PartyPage.xaml
 C:\Users\it\Desktop\Character\CombatTrackerClient\obj\x86\Debug\Pages\PartyPage.xbf
+C:\Users\it\Desktop\Character\CombatTrackerClient\bin\x86\Debug\Custom Controls\PartyItem.xbf
+C:\Users\it\Desktop\Character\CombatTrackerClient\obj\x86\Debug\Custom Controls\PartyItem.g.i.cs
+C:\Users\it\Desktop\Character\CombatTrackerClient\obj\x86\Debug\Custom Controls\PartyItem.g.cs
+C:\Users\it\Desktop\Character\CombatTrackerClient\obj\x86\Debug\Custom Controls\PartyItem.xaml
+C:\Users\it\Desktop\Character\CombatTrackerClient\obj\x86\Debug\Custom Controls\PartyItem.xbf

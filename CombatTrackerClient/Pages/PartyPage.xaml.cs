@@ -1,4 +1,6 @@
-﻿using System;
+﻿using CombatTrackerClient.Custom_Controls;
+using CombatTrackerClient.Tools;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -25,6 +27,27 @@ namespace CombatTrackerClient
 		public PartyPage()
 		{
 			this.InitializeComponent();
+
+            LoadMembers();
 		}
-	}
+
+        private void LoadMembers()
+        {
+            gridView.Items.Clear();
+
+            gridView.Items.Add(MainPage.CHARACTER);
+
+            foreach (Character c in MainPage.CHARACTER.Party)
+            {
+                gridView.Items.Add(c);
+            }
+        }
+
+        private void buttonAddMember_Click(object sender, RoutedEventArgs e)
+        {
+            MainPage.CHARACTER.Party.Add(new Character(MainPage.CHARACTER));
+
+            LoadMembers();
+        }
+    }
 }

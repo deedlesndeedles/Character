@@ -22,7 +22,7 @@
     <AppXManifest Include="C:\Users\it\Desktop\Character\CombatTrackerClient\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2016-12-08T00:29:09.211</Modified>
+      <Modified>2016-12-09T00:12:45.586</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
@@ -60,15 +60,15 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\it\Desktop\Character\CombatTrackerClient\bin\x86\Debug\Core\CombatTrackerClient.exe">
       <PackagePath>CombatTrackerClient.exe</PackagePath>
-      <Modified>2016-12-08T00:29:09.204</Modified>
+      <Modified>2016-12-09T00:12:45.583</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\it\Desktop\Character\CombatTrackerClient\bin\x86\Debug\Core\CombatTrackerClient.xr.xml">
       <PackagePath>CombatTrackerClient.xr.xml</PackagePath>
-      <Modified>2016-12-08T00:15:56.294</Modified>
+      <Modified>2016-12-08T23:57:10.894</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\it\Desktop\Character\CombatTrackerClient\bin\x86\Debug\Core\entrypoint\CombatTrackerClient.exe">
       <PackagePath>entrypoint\CombatTrackerClient.exe</PackagePath>
-      <Modified>2016-12-08T00:29:08.123</Modified>
+      <Modified>2016-12-09T00:12:44.794</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\it\Desktop\Character\CombatTrackerClient\bin\x86\Debug\Core\Microsoft.CSharp.dll">
       <PackagePath>Microsoft.CSharp.dll</PackagePath>
@@ -92,7 +92,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\it\Desktop\Character\CombatTrackerClient\bin\x86\Debug\Core\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2016-12-08T00:29:08.659</Modified>
+      <Modified>2016-12-09T00:12:45.210</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\it\Desktop\Character\CombatTrackerClient\bin\x86\Debug\Core\System.AppContext.dll">
       <PackagePath>System.AppContext.dll</PackagePath>

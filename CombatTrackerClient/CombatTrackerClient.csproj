@@ -108,8 +108,8 @@
     <Compile Include="Custom Controls\LoadItem.xaml.cs">
       <DependentUpon>LoadItem.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Custom Controls\PartyListItem.xaml.cs">
-      <DependentUpon>PartyListItem.xaml</DependentUpon>
+    <Compile Include="Custom Controls\PartyItem.xaml.cs">
+      <DependentUpon>PartyItem.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pages\CombatPage.xaml.cs">
       <DependentUpon>CombatPage.xaml</DependentUpon>
@@ -186,7 +186,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Custom Controls\PartyListItem.xaml">
+    <Page Include="Custom Controls\PartyItem.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

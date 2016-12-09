@@ -18,7 +18,8 @@
             <RowDefinition/>
             <RowDefinition Height="9*"/>
         </Grid.RowDefinitions>
-        <TextBlock x:Name="textName" Margin="0" TextWrapping="Wrap" Text="Name" VerticalAlignment="Center" FontSize="18.667"/>
+        <TextBlock x:ConnectionId='1' x:Name="textName" Margin="0" TextWrapping="Wrap" Text="Name" VerticalAlignment="Center" FontSize="18.667"/>
 
     </Grid>
 </UserControl>
+

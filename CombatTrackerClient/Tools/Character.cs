@@ -97,17 +97,50 @@ namespace CombatTrackerClient.Tools
         }
         #endregion
 
-        public Character()
+        #region Party
+        List<Character> party;
+        public List<Character> Party
         {
-            
+            get
+            {
+                return party;
+            }
+            set
+            {
+                party = value;
+            }
         }
 
-        private async Task<bool> Save()
+        Character partyLeader;
+        public Character PartyLeader
+        {
+            get
+            {
+                return partyLeader;
+            }
+            set
+            {
+                partyLeader = value;
+            }
+        }
+        #endregion
+
+        public Character(Character leader = null)
+        {
+            partyLeader = leader;
+            if (partyLeader == null)
+            {
+                partyLeader = this;
+                party = new List<Character>();
+            }
+        }
+
+        /*private async Task<bool> Save()
         {
             //CharacterSerializer.AddCharacterToSerializationList(this);
             await CharacterSerializer.Serialize();
 
             return true;
-        }
+        }*/
     }
 }
