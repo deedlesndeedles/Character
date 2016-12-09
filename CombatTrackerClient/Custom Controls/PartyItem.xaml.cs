@@ -39,7 +39,7 @@ namespace CombatTrackerClient.Custom_Controls
 
             partyMember = character;
 
-            textName.Text = partyMember.Name;
+            textName.Text = partyMember.CharName;
         }
     }
 }

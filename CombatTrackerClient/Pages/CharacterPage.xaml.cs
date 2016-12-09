@@ -32,14 +32,14 @@ namespace CombatTrackerClient
         {
             await CharacterSerializer.Deserialize();
 
-            textName.Text = MainPage.CHARACTER.Name;
+            textName.Text = MainPage.CHARACTER.CharName;
             textPlayer.Text = MainPage.CHARACTER.Player;
             textCampaign.Text = MainPage.CHARACTER.Campaign;
         }
 
         private void textName_LostFocus(object sender, RoutedEventArgs e)
         {
-            MainPage.CHARACTER.Name = textName.Text;
+            MainPage.CHARACTER.CharName = textName.Text;
             CharacterSerializer.Serialize();
         }
 

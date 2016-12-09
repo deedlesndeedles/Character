@@ -93,7 +93,7 @@ namespace CombatTrackerClient
 
             foreach (Character c in CharacterSerializer.Characters.Values)
             {
-                gridView.Items.Add(new LoadItem(c.ID, c.Name, c.Campaign, c.Level));
+                gridView.Items.Add(new LoadItem(c.ID, c.CharName, c.Campaign, c.Level));
             }
         }
 
@@ -102,7 +102,7 @@ namespace CombatTrackerClient
             gridView.Visibility = Visibility.Visible;
             gridFiles.Visibility = Visibility.Visible;
 
-            System.Diagnostics.Debug.WriteLine("O CHARACTER " + CHARACTER.Name);
+            System.Diagnostics.Debug.WriteLine("O CHARACTER " + CHARACTER.CharName);
             System.Diagnostics.Debug.WriteLine("O CURRindex " + CharacterSerializer.CURRENTindex);
            
             await LoadCharacters();
@@ -111,7 +111,7 @@ namespace CombatTrackerClient
             blank.SetPageType(PageType.BLANK);
             ChangePage(blank);
 
-            System.Diagnostics.Debug.WriteLine("N CHARACTER " + CHARACTER.Name);
+            System.Diagnostics.Debug.WriteLine("N CHARACTER " + CHARACTER.CharName);
             System.Diagnostics.Debug.WriteLine("N CURRindex " + CharacterSerializer.CURRENTindex);
 
             System.Diagnostics.Debug.WriteLine("# Characters " + CharacterSerializer.Characters.Count);

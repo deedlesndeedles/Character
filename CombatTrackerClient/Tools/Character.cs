@@ -25,7 +25,7 @@ namespace CombatTrackerClient.Tools
         }
 
         string name = "";
-        public string Name
+        public string CharName
         {
             get
             {
@@ -111,26 +111,26 @@ namespace CombatTrackerClient.Tools
             }
         }
 
-        Character partyLeader;
-        public Character PartyLeader
+        string partyLeaderID;
+        public string PartyLeaderID
         {
             get
             {
-                return partyLeader;
+                return partyLeaderID;
             }
             set
             {
-                partyLeader = value;
+                partyLeaderID = value;
             }
         }
         #endregion
 
-        public Character(Character leader = null)
+        public Character(string leaderID = "-1")
         {
-            partyLeader = leader;
-            if (partyLeader == null)
+            partyLeaderID = leaderID;
+            if (partyLeaderID == "-1")
             {
-                partyLeader = this;
+                partyLeaderID = id;
                 party = new List<Character>();
             }
         }

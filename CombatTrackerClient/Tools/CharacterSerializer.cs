@@ -96,17 +96,21 @@ namespace CombatTrackerClient.Tools
 
             string f = LoadFromXDocument(doc);
 
-            Characters = JsonConvert.DeserializeObject<Dictionary<string, Character>>(f);
-
-
-            for (int k = 0; k < CharacterSerializer.Characters.Count; k++)
+            if (f.Length > 40 || f.Length < 2)
             {
-                System.Diagnostics.Debug.WriteLine(CharacterSerializer.Characters.ElementAt(k).Key + " loaded");
+                Characters = JsonConvert.DeserializeObject<Dictionary<string, Character>>(f);
+
+
+                for (int k = 0; k < CharacterSerializer.Characters.Count; k++)
+                {
+                    System.Diagnostics.Debug.WriteLine(CharacterSerializer.Characters.ElementAt(k).Key + " loaded");
+                }
+
+                MainPage.CHARACTER = Characters.ElementAt(CURRENTindex).Value;
+
+                return true;
             }
-
-            MainPage.CHARACTER = Characters.ElementAt(CURRENTindex).Value;
-
-            return true;
+            return false;
         }
 
         private static string LoadFromXDocument(XDocument doc)

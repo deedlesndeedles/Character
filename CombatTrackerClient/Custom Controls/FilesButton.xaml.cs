@@ -53,14 +53,14 @@ namespace CombatTrackerClient
 			FilesGrid.Background = App.Colors.BUTTON_CLICK;
 		}
 
-        private void Create()
+        private async void Create()
         {
             Character character = new Character();
 
             character.ID = CharacterSerializer.GenerateID();
 
             CharacterSerializer.AddCharacterToSerializationList(character);
-            CharacterSerializer.Serialize();
+            await CharacterSerializer.Serialize();
 
             MainPage.MAINPAGE.SwitchCharacter(character);
             
