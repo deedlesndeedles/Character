@@ -125,13 +125,17 @@ namespace CombatTrackerClient.Tools
         }
         #endregion
 
-        public Character(string leaderID = "-1")
+        public Character(string leaderID = "self")
         {
-            partyLeaderID = leaderID;
-            if (partyLeaderID == "-1")
+            if (leaderID == "self")
             {
-                partyLeaderID = id;
+                partyLeaderID = leaderID;
                 party = new List<Character>();
+            }
+            else
+            {
+                partyLeaderID = leaderID;
+                CharName = "Unnamed";
             }
         }
 

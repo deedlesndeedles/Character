@@ -106,7 +106,8 @@ namespace CombatTrackerClient.Tools
                     System.Diagnostics.Debug.WriteLine(CharacterSerializer.Characters.ElementAt(k).Key + " loaded");
                 }
 
-                MainPage.CHARACTER = Characters.ElementAt(CURRENTindex).Value;
+                //MainPage.CHARACTERcurrent = Characters.ElementAt(CURRENTindex).Value;
+                //MainPage.CHARACTERloaded = MainPage.CHARACTERcurrent;
 
                 return true;
             }

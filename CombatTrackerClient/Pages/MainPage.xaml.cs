@@ -35,7 +35,8 @@ namespace CombatTrackerClient
         NavigationButton _currentlySelected;
 
         public static MainPage MAINPAGE;
-        public static Character CHARACTER;
+        public static Character CHARACTERcurrent, CHARACTERloaded;
+        public static int SELECTEDparty;
 
         public MainPage()
         {
@@ -102,20 +103,11 @@ namespace CombatTrackerClient
             gridView.Visibility = Visibility.Visible;
             gridFiles.Visibility = Visibility.Visible;
 
-            System.Diagnostics.Debug.WriteLine("O CHARACTER " + CHARACTER.CharName);
-            System.Diagnostics.Debug.WriteLine("O CURRindex " + CharacterSerializer.CURRENTindex);
-           
             await LoadCharacters();
 
             NavigationButton blank = new NavigationButton();
             blank.SetPageType(PageType.BLANK);
             ChangePage(blank);
-
-            System.Diagnostics.Debug.WriteLine("N CHARACTER " + CHARACTER.CharName);
-            System.Diagnostics.Debug.WriteLine("N CURRindex " + CharacterSerializer.CURRENTindex);
-
-            System.Diagnostics.Debug.WriteLine("# Characters " + CharacterSerializer.Characters.Count);
-            System.Diagnostics.Debug.WriteLine("# Grid Items " + gridView.Items.Count);
 
             await CharacterSerializer.Serialize();
 
@@ -127,9 +119,11 @@ namespace CombatTrackerClient
             gridView.Visibility = Visibility.Collapsed;
             gridFiles.Visibility = Visibility.Collapsed;
 
-            CHARACTER = character;
+            
+            CHARACTERloaded = character;
+            CHARACTERcurrent = CHARACTERloaded;
 
-            CharacterSerializer.CURRENTindex = CharacterSerializer.FindCharacterIndex(CHARACTER);
+            CharacterSerializer.CURRENTindex = CharacterSerializer.FindCharacterIndex(CHARACTERloaded);
 
             ChangePage(NavCharacter);
         }
@@ -145,9 +139,10 @@ namespace CombatTrackerClient
                 //CHARACTER = CharacterSerializer.characters.Values.ElementAt(gridView.SelectedIndex);
 
                 //Select by Character Indicated
-                CHARACTER = CharacterSerializer.FindCharacterByID(((LoadItem)gridView.SelectedItem).ID);
+                CHARACTERcurrent = CharacterSerializer.FindCharacterByID(((LoadItem)gridView.SelectedItem).ID);
+                CHARACTERloaded = CharacterSerializer.FindCharacterByID(((LoadItem)gridView.SelectedItem).ID);
 
-                CharacterSerializer.CURRENTindex = CharacterSerializer.FindCharacterIndex(CHARACTER);
+                CharacterSerializer.CURRENTindex = CharacterSerializer.FindCharacterIndex(CHARACTERloaded);
 
                 ChangePage(NavCharacter);
             }

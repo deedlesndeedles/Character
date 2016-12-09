@@ -21,7 +21,7 @@ namespace CombatTrackerClient.Custom_Controls
     public sealed partial class PartyItem : UserControl
     {
         Character partyMember;
-        public Character Partymember
+        public Character PartyMember
         {
             get
             {
@@ -38,6 +38,8 @@ namespace CombatTrackerClient.Custom_Controls
             this.InitializeComponent();
 
             partyMember = character;
+
+            System.Diagnostics.Debug.WriteLine(partyMember.CharName);
 
             textName.Text = partyMember.CharName;
         }

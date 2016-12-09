@@ -7,6 +7,7 @@ using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
+using Windows.UI.Popups;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
@@ -24,7 +25,9 @@ namespace CombatTrackerClient
 	/// </summary>
 	public sealed partial class PartyPage : Page
 	{
-		public PartyPage()
+        private int selected; 
+
+        public PartyPage()
 		{
 			this.InitializeComponent();
 
@@ -35,19 +38,45 @@ namespace CombatTrackerClient
         {
             gridView.Items.Clear();
 
-            gridView.Items.Add(MainPage.CHARACTER);
+            gridView.Items.Add(new PartyItem(MainPage.CHARACTERloaded));
 
-            foreach (Character c in MainPage.CHARACTER.Party)
+            foreach (Character c in MainPage.CHARACTERloaded.Party)
             {
-                gridView.Items.Add(c);
+                gridView.Items.Add(new PartyItem(c));
             }
+
+            gridView.SelectedIndex = MainPage.SELECTEDparty;
         }
 
         private void buttonAddMember_Click(object sender, RoutedEventArgs e)
         {
-            MainPage.CHARACTER.Party.Add(new Character(MainPage.CHARACTER));
+            MainPage.CHARACTERcurrent.Party.Add(new Character(MainPage.CHARACTERloaded.ID));
+
+            CharacterSerializer.Serialize();
 
             LoadMembers();
+        }
+
+        private void buttonEditMember_Click(object sender, RoutedEventArgs e)
+        {
+            if (gridView.SelectedItem != null)
+            {
+                if (MainPage.CHARACTERcurrent != ((PartyItem)gridView.SelectedItem).PartyMember)
+                {
+                    MainPage.CHARACTERcurrent = ((PartyItem)gridView.SelectedItem).PartyMember;
+                    MainPage.SELECTEDparty = gridView.SelectedIndex;
+                }
+                else
+                {
+                    MessageDialog dialog = new MessageDialog("Character already selected.");
+                    dialog.ShowAsync();
+                }
+            }
+            else
+            {
+                MessageDialog dialog = new MessageDialog("Select a character to edit.");
+                dialog.ShowAsync();
+            }
         }
     }
 }

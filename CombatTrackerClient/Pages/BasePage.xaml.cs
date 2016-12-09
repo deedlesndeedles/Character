@@ -15,7 +15,6 @@ using Windows.UI.Xaml.Navigation;
 using System.Threading.Tasks;
 using System.Net.Http;
 using Newtonsoft.Json;
-using CombatTrackerServer.Models;
 using CombatTrackerClient.Custom_Controls;
 
 namespace CombatTrackerClient
@@ -28,11 +27,6 @@ namespace CombatTrackerClient
 		}
 
 		private void Page_Loaded(object sender, RoutedEventArgs e)
-		{
-			LoadParties();
-		}
-
-		private async void LoadParties()
 		{
 			
 		}

@@ -346,7 +346,7 @@ namespace CombatTrackerClient.CombatTrackerClient_XamlTypeInfo
 
             case 13:   //  CombatTrackerClient.Custom_Controls.PartyItem
                 userType = new global::CombatTrackerClient.CombatTrackerClient_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.UserControl"));
-                userType.AddMemberName("Partymember");
+                userType.AddMemberName("PartyMember");
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
@@ -529,15 +529,15 @@ namespace CombatTrackerClient.CombatTrackerClient_XamlTypeInfo
             var that = (global::CombatTrackerClient.Custom_Controls.LoadItem)instance;
             that.ID = (global::System.String)Value;
         }
-        private object get_5_PartyItem_Partymember(object instance)
+        private object get_5_PartyItem_PartyMember(object instance)
         {
             var that = (global::CombatTrackerClient.Custom_Controls.PartyItem)instance;
-            return that.Partymember;
+            return that.PartyMember;
         }
-        private void set_5_PartyItem_Partymember(object instance, object Value)
+        private void set_5_PartyItem_PartyMember(object instance, object Value)
         {
             var that = (global::CombatTrackerClient.Custom_Controls.PartyItem)instance;
-            that.Partymember = (global::CombatTrackerClient.Tools.Character)Value;
+            that.PartyMember = (global::CombatTrackerClient.Tools.Character)Value;
         }
         private object get_6_NavigationButton_Type(object instance)
         {
@@ -587,11 +587,11 @@ namespace CombatTrackerClient.CombatTrackerClient_XamlTypeInfo
                 xamlMember.Getter = get_4_LoadItem_ID;
                 xamlMember.Setter = set_4_LoadItem_ID;
                 break;
-            case "CombatTrackerClient.Custom_Controls.PartyItem.Partymember":
+            case "CombatTrackerClient.Custom_Controls.PartyItem.PartyMember":
                 userType = (global::CombatTrackerClient.CombatTrackerClient_XamlTypeInfo.XamlUserType)GetXamlTypeByName("CombatTrackerClient.Custom_Controls.PartyItem");
-                xamlMember = new global::CombatTrackerClient.CombatTrackerClient_XamlTypeInfo.XamlMember(this, "Partymember", "CombatTrackerClient.Tools.Character");
-                xamlMember.Getter = get_5_PartyItem_Partymember;
-                xamlMember.Setter = set_5_PartyItem_Partymember;
+                xamlMember = new global::CombatTrackerClient.CombatTrackerClient_XamlTypeInfo.XamlMember(this, "PartyMember", "CombatTrackerClient.Tools.Character");
+                xamlMember.Getter = get_5_PartyItem_PartyMember;
+                xamlMember.Setter = set_5_PartyItem_PartyMember;
                 break;
             case "CombatTrackerClient.NavigationButton.Type":
                 userType = (global::CombatTrackerClient.CombatTrackerClient_XamlTypeInfo.XamlUserType)GetXamlTypeByName("CombatTrackerClient.NavigationButton");
